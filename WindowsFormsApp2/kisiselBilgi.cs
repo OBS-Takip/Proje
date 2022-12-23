@@ -69,6 +69,7 @@ namespace WindowsFormsApp2
                 tc.Text = id;
                 kTarihi.Text = kTatih; 
 
+
             }
 
         // İşlem bittikten sonra veritabanı bağlantısını kapatın ve OleDbDataReader nesnesini kapatın
