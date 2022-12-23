@@ -21,17 +21,8 @@ namespace WindowsFormsApp2
         {
             // takvim kapatma butonu
             ogrenciGirisi a = new ogrenciGirisi();
-            a.girisYapmısOgrNo = oNumara;
             a.Show();
             this.Close();
-        }
-
-        public string oNumara;
-
-
-        private void takvim_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
