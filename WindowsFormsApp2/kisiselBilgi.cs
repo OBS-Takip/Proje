@@ -57,6 +57,7 @@ namespace WindowsFormsApp2
                 string data = reader["dogum_tarihi"].ToString();
                 string fakulte = reader["bolum"].ToString();
                 string kTatih = reader["kayit_tarihi"].ToString();
+
                 
                 // Burada forma yazdırma işlemini gerçekleştirin
 
