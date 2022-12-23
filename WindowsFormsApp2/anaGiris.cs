@@ -3,6 +3,11 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Data;
 using System.Linq;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace WindowsFormsApp2
 {
@@ -13,16 +18,7 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
-        OleDbConnection baglanti = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Proje\cSharpProje.xlsx ;Extended Properties=Excel 12.0 Xml; HDR=YES;");
-
-        void Veriler()
-        {
-            OleDbDataAdapter da = new OleDbDataAdapter("Select * Form [ogrensif$]", baglanti);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            
-            
-        }
+        
         private void button1_Click(object sender, EventArgs e)
         {
             //akademisyen login butonu
@@ -88,7 +84,7 @@ namespace WindowsFormsApp2
         {
             //öğrenci şifre 
            
-                textBox3.PasswordChar = '*';
+                ogrsif.PasswordChar = '*';
          
 
         }
@@ -125,22 +121,81 @@ namespace WindowsFormsApp2
             
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            
-            // öğrenci giriş
-            ogrenciGirisi ogr = new ogrenciGirisi();
-            ogr.Show();
-            this.Hide();
-        }
+        
+        OleDbConnection con;
+        OleDbCommand cmd;
+        OleDbDataReader dr;
 
+        
+        public void button3_Click_1(object sender, EventArgs e)
+        {
+            string ad = ogrno.Text;
+            string sifre = ogrsif.Text;
+
+
+
+
+            
+            con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=obstakip.accdb");
+            cmd = new OleDbCommand();
+            con.Open();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT * FROM Login where ogrencino='" + ogrno.Text + "' AND sifre='" + ogrsif.Text + "'";
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                MessageBox.Show("Giriş Başarılı");
+                kisiselBilgi obj = new kisiselBilgi();
+                obj.GelenOgrNo = ad;
+                obj.ShowDialog();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Kullanıcı adı ya da şifre yanlış");
+            }
+
+            con.Close();
+
+            
+            
+            
+        }
+        
+        
         private void button7_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
+
+        OleDbConnection con1;
+        OleDbCommand cmd1;
+        OleDbDataReader dr1;
 
         private void button1_Click_2(object sender, EventArgs e)
         {
+            string ad = akamail.Text;
+            string sifre = akasif.Text;
+            con1 = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=obstakip.accdb");
+            cmd1 = new OleDbCommand();
+            con1.Open();
+            cmd1.Connection = con1;
+            cmd1.CommandText = "SELECT * FROM Login where akademikmail='" + akamail.Text + "' AND akademiksifre='" + akasif.Text + "'";
+            dr1 = cmd1.ExecuteReader();
+            if (dr1.Read())
+            {
+                MessageBox.Show("Giriş Başarılı");
+                akademisyen aka2 = new akademisyen();
+                aka2.Show();
+            }
+            else
+            {
+                MessageBox.Show("Kullanıcı adı ya da şifre yanlış");
+            }
+
+            con1.Close();
+
+
             // akademisyen giriş butonu
             akademisyen grs = new akademisyen();
             grs.Show();
@@ -152,12 +207,12 @@ namespace WindowsFormsApp2
             if (checkBox1.Checked)
             {
                 //karakteri göster.
-                textBox3.PasswordChar = '\0';
+                ogrsif.PasswordChar = '\0';
             }
             //değilse karakterlerin yerine * koy.
             else
             {
-                textBox3.PasswordChar = '*';
+                ogrsif.PasswordChar = '*';
             }
         }
 
@@ -178,6 +233,30 @@ namespace WindowsFormsApp2
         }
 
         private void anaGiris_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            akasif.PasswordChar = '*';
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                //karakteri göster.
+                akasif.PasswordChar = '\0';
+            }
+            //değilse karakterlerin yerine * koy.
+            else
+            {
+                akasif.PasswordChar = '*';
+            }
+        }
+
+        private void akamail_TextChanged(object sender, EventArgs e)
         {
 
         }

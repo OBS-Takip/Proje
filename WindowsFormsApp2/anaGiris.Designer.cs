@@ -30,20 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(anaGiris));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.akasif = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.akamail = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.ogrsif = new System.Windows.Forms.TextBox();
+            this.ogrno = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -55,13 +56,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.pictureBox3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.akasif);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.akamail);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.Location = new System.Drawing.Point(30, 24);
             this.groupBox1.Name = "groupBox1";
@@ -70,6 +72,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Akademisyen Giriş Yap";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.checkBox2.Location = new System.Drawing.Point(309, 245);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(98, 19);
+            this.checkBox2.TabIndex = 29;
+            this.checkBox2.Text = "Şifreyi Göster";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // button1
             // 
@@ -99,7 +113,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(50, 219);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 19);
+            this.label1.Size = new System.Drawing.Size(42, 20);
             this.label1.TabIndex = 26;
             this.label1.Text = "Şifre:";
             // 
@@ -113,14 +127,15 @@
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
-            // textBox1
+            // akasif
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.textBox1.Location = new System.Drawing.Point(162, 220);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 19);
-            this.textBox1.TabIndex = 25;
+            this.akasif.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.akasif.Location = new System.Drawing.Point(162, 220);
+            this.akasif.Multiline = true;
+            this.akasif.Name = "akasif";
+            this.akasif.Size = new System.Drawing.Size(190, 19);
+            this.akasif.TabIndex = 25;
+            this.akasif.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // label2
             // 
@@ -130,18 +145,19 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(50, 180);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 19);
+            this.label2.Size = new System.Drawing.Size(87, 20);
             this.label2.TabIndex = 23;
             this.label2.Text = "Mail Adresi:";
             // 
-            // textBox2
+            // akamail
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.textBox2.Location = new System.Drawing.Point(162, 180);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(190, 20);
-            this.textBox2.TabIndex = 24;
+            this.akamail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.akamail.Location = new System.Drawing.Point(162, 180);
+            this.akamail.Multiline = true;
+            this.akamail.Name = "akamail";
+            this.akamail.Size = new System.Drawing.Size(190, 20);
+            this.akamail.TabIndex = 24;
+            this.akamail.TextChanged += new System.EventHandler(this.akamail_TextChanged);
             // 
             // groupBox2
             // 
@@ -149,8 +165,8 @@
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.ogrsif);
+            this.groupBox2.Controls.Add(this.ogrno);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox2.Location = new System.Drawing.Point(501, 24);
@@ -167,7 +183,7 @@
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox1.Location = new System.Drawing.Point(315, 245);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(86, 17);
+            this.checkBox1.Size = new System.Drawing.Size(96, 19);
             this.checkBox1.TabIndex = 24;
             this.checkBox1.Text = "Şifreyi göster";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -201,30 +217,30 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(46, 219);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 19);
+            this.label3.Size = new System.Drawing.Size(42, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Şifre:";
             // 
-            // textBox3
+            // ogrsif
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.textBox3.Location = new System.Drawing.Point(168, 220);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(190, 19);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.ogrsif.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.ogrsif.Location = new System.Drawing.Point(168, 220);
+            this.ogrsif.Multiline = true;
+            this.ogrsif.Name = "ogrsif";
+            this.ogrsif.Size = new System.Drawing.Size(190, 19);
+            this.ogrsif.TabIndex = 2;
+            this.ogrsif.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox4
+            // ogrno
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.textBox4.Location = new System.Drawing.Point(168, 180);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(190, 20);
-            this.textBox4.TabIndex = 1;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.ogrno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.ogrno.Location = new System.Drawing.Point(168, 180);
+            this.ogrno.Multiline = true;
+            this.ogrno.Name = "ogrno";
+            this.ogrno.Size = new System.Drawing.Size(190, 20);
+            this.ogrno.TabIndex = 1;
+            this.ogrno.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.ogrno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // label4
             // 
@@ -234,7 +250,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(46, 180);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 19);
+            this.label4.Size = new System.Drawing.Size(88, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Öğrenci No:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -295,20 +311,21 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox ogrsif;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox akasif;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        public System.Windows.Forms.TextBox ogrno;
+        public System.Windows.Forms.TextBox akamail;
+        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button button1;
     }
 }
 
