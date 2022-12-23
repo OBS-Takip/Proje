@@ -38,6 +38,7 @@ namespace WindowsFormsApp2
             OleDbCommand command = new OleDbCommand();
             command.CommandText = "SELECT * FROM Ogrenci_kayitlari WHERE ogrno = @";
             command.Parameters.AddWithValue("@ogrno", GelenOgrNo);
+
             command.Connection = connection;
 
             // Veritabanına bağlanıp sorgu çalıştırmak için Connection nesnesini açın ve OleDbCommand nesnesini çalıştırın
