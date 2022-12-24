@@ -87,7 +87,7 @@ namespace WindowsFormsApp2
             komut.Parameters.AddWithValue("@p1", textogrno.Text);
             komut.ExecuteNonQuery();
             baglanti.Close();
-            MessageBox.Show("Devamsızlık Bilgileri Güncellendi.","Güncelleme");
+            MessageBox.Show("Devamsızlık Bilgileri 1 Güncellendi.","Güncelleme");
             Veriler();
 
 
