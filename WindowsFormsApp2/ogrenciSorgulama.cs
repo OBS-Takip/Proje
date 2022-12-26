@@ -46,7 +46,6 @@ namespace WindowsFormsApp2
         OleDbDataReader dr1;
         private void button2_Click_1(object sender, EventArgs e)
         {
-            //öğrenci numaralarına erişir 
             string ad = textakogrno.Text;
             string sifre = textakogrno.Text;
             con1 = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=obstakip.accdb");
@@ -57,7 +56,6 @@ namespace WindowsFormsApp2
             dr1 = cmd1.ExecuteReader();
             if (dr1.Read())
             {
-                //eğer aranan öğrenci numarası sistemde kayıtlı ise akademiöğrencigör formuna gider
                 akademiöğrencigör frm = new akademiöğrencigör();
                 frm.GelenOgrNo = textakogrno.Text;
                 frm.Show();
@@ -65,7 +63,6 @@ namespace WindowsFormsApp2
             }
             else
             {
-                //eğer aranan öğrenci numarası sistemde yoksa akademiöğrenci sayfasına geçmez ve ekrana mesaj verir
                 MessageBox.Show("Böyle bir öğrenci yok");
             }
 

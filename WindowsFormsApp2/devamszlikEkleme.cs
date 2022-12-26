@@ -17,14 +17,12 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
-        // excel dosyasına  bağlanır
         OleDbConnection baglanti = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;
             Data Source=cSharpProje.xlsx;
             Extended Properties='Excel 12.0 Xml;HDR=YES'");
 
         void Veriler()
         {
-            //excel dosyasındaki devamsızlık sayfası seçilir
             OleDbDataAdapter da = new OleDbDataAdapter("SELECT *FROM [devamsizlik$]", baglanti);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -62,7 +60,6 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //devamsızlıktaki satır ve sütunlara yeni veriler kaydedilir
             baglanti.Open();
             OleDbCommand komut = new OleDbCommand("insert into [devamsizlik$] (ogrno,FİZİK,Kimya,BİYOLOJİ,PROGRAMLAMA,LAB) values (@p1,@p2,@p3,@p4,@p5,@p6)", baglanti);
             komut.Parameters.AddWithValue("@p1", textogrno.Text);
@@ -80,7 +77,6 @@ namespace WindowsFormsApp2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //exceldeki satır ve sütunlara erişilir ve buralardaki veriler güncellenir
             baglanti.Open();
             OleDbCommand komut = new OleDbCommand("update [devamsizlik$] set FİZİK=@p2,Kimya=@p3,BİYOLOJİ=@p4,PROGRAMLAMA=@p5,LAB=@p6 where ogrno=@p1", baglanti);
             komut.Parameters.AddWithValue("@p2", textfizik.Text);

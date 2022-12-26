@@ -1,5 +1,4 @@
-﻿using ADODB;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -99,11 +98,10 @@ namespace WindowsFormsApp2
                 sorgulananİsim.Text = reader["ogrenciIsim"].ToString();
                 sorgulananSoyisim.Text = reader["ogrenciSoyisim"].ToString();
                 
-                //eğer öğrenciyi bulursa verilerini yazdırır 
+
             }
             else
             {
-                //ama böyle bir öğrenci yoksa mesaj yazdırır
                 MessageBox.Show("Böyle bir öğrenci yok");
             }
                 
@@ -117,7 +115,6 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Veritabanına bağlanmak için bir OleDbConnection nesnesi oluşturun
             OleDbConnection baglanti = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=obstakip.accdb");
             string sorgu = "SELECT * FROM notlar WHERE ogrenciNo = @ogrenciNo";
             OleDbCommand command = new OleDbCommand(sorgu, baglanti);
@@ -125,22 +122,23 @@ namespace WindowsFormsApp2
             baglanti.Open();
             OleDbDataReader reader = command.ExecuteReader();
             reader.Read();
-            v1.Text = reader["fizik1"].ToString();
-            f1.Text = reader["fizik2"].ToString();
+            vize1.Text = reader["fizik1"].ToString();
+            final1.Text = reader["fizik2"].ToString();
             
+            //double fNotu = ((((double)reader["fizik1"])* 0.4) + ((double)reader["fizik2"]) *0.6 );
             int Vnotu = (int)reader["fizik1"];
             int Fnotu  = (int)reader["fizik2"];
 
             double Sonuc = ((Vnotu * 0.4) + (Fnotu * 0.6 ));
             if (Sonuc > 60)
             {
-                s1.Text = "GEÇTİ";
+                sonuç1.Text = "GEÇTİ";
             }
             else
             {
-                s1.Text = "KALDI";
+                sonuç1.Text = "KALDI";
             }
-            o1.Text = Sonuc.ToString();
+            ortalama1.Text = Sonuc.ToString();
         }
 
         private void kimya_Click(object sender, EventArgs e)
@@ -153,26 +151,26 @@ namespace WindowsFormsApp2
             baglanti.Open();
             OleDbDataReader reader = command.ExecuteReader();
             reader.Read();
-            v1.Text = reader["kimya1"].ToString();
-            f1.Text = reader["kimya2"].ToString();
+            vize1.Text = reader["kimya1"].ToString();
+            final1.Text = reader["kimya2"].ToString();
 
-           
+            //double fNotu = ((((double)reader["fizik1"])* 0.4) + ((double)reader["fizik2"]) *0.6 );
             int Vnotu = (int)reader["kimya1"];
             int Fnotu = (int)reader["kimya2"];
 
             double Sonuc = ((Vnotu * 0.4) + (Fnotu * 0.6));
             if (Sonuc > 60)
             {
-                s1.Text = "GEÇTİ";
+                sonuç1.Text = "GEÇTİ";
             }
             else
             {
-                s1.Text = "KALDI";
+                sonuç1.Text = "KALDI";
             }
-            o1.Text = Sonuc.ToString();
+            ortalama1.Text = Sonuc.ToString();
         }
 
-        public void biyo_Click(object sender, EventArgs e)
+        private void biyo_Click(object sender, EventArgs e)
         {
 
             OleDbConnection baglanti = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=obstakip.accdb");
@@ -182,110 +180,23 @@ namespace WindowsFormsApp2
             baglanti.Open();
             OleDbDataReader reader = command.ExecuteReader();
             reader.Read();
-            v1.Text = reader["biyo1"].ToString();
-            f1.Text = reader["biyo2"].ToString();
+            vize1.Text = reader["mat1"].ToString();
+            final1.Text = reader["mat2"].ToString();
 
-           
-            int Vnotu = (int)reader["biyo1"];
-            int Fnotu = (int)reader["biyo2"];
+            //double fNotu = ((((double)reader["fizik1"])* 0.4) + ((double)reader["fizik2"]) *0.6 );
+            int Vnotu = (int)reader["mat1"];
+            int Fnotu = (int)reader["mat2"];
 
             double Sonuc = ((Vnotu * 0.4) + (Fnotu * 0.6));
             if (Sonuc > 60)
             {
-                s1.Text = "GEÇTİ";
+                sonuç1.Text = "GEÇTİ";
             }
             else
             {
-                s1.Text = "KALDI";
+                sonuç1.Text = "KALDI";
             }
-            o1.Text = Sonuc.ToString();
-             void button2_Click()
-            {
-
-                // kaydet butonu
-
-
-                string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=obstakip.accdb;";
-
-                using (OleDbConnection connection = new OleDbConnection(connectionString))
-                {
-                    connection.Open();
-
-                    string query = "INSERT INTO notlar (ogrenciNo, biyo1, biyo2) VALUES (@ogrenciNo, @biyo1, @biyo2)";
-
-                    using (OleDbCommand command1 = new OleDbCommand(query, connection))
-                    {
-
-                        command1.Parameters.AddWithValue("@biyo1", v1.Text);
-                        command1.Parameters.AddWithValue("@biyo2", f1.Text);
-                        command1.ExecuteNonQuery();
-                    }
-                }
-
-
-
-
-
-
-                /*
-                OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=obstakip.accdb");
-
-
-                baglanti.Open();// bağlantı açıldı
-                //sorgu komut yapısı oluşturuldu
-                 OleDbCommand sorgu = new OleDbCommand()
-                {
-
-                }
-
-                sorgu.Connection = baglanti;
-
-
-                string vize = v1.Text;
-                string final = f1.Text;
-
-
-                sorgu.CommandType = CommandType.Text;
-                //string query = "INSERT INTO notlar (ogrenciNo, biyo1,biyo2,fizik1,fizik2,kimya1,kimya2,lab1,lab2,prog1,prog2) values (@ogrenciNo, @biyo1,@biyo2,@fizik1,@fizik2,@kimya1,@kimya2,@lab1,@lab2,@prog1,@prog2)";
-
-
-                if (biyo.Enabled == true && v1.Enabled == true && f1.Enabled == true)
-                {
-                    sorgu.CommandText = "insert into notlar (ogrenciNo, biyo1,biyo2) values (@ogrenciNo,@biyo1,@biyo2)";
-                    sorgu.Parameters.AddWithValue("@ogrenciNo", sorgulananOgrenciNo.Text);
-                    sorgu.Parameters.AddWithValue("@biyo1", vize);
-                    sorgu.Parameters.AddWithValue("@biyo2", final);
-                    //sorgu.ExecuteNonQuery();
-                }
-
-                else if(fizik.Enabled == true && v1.Enabled==true && f1.Enabled==true)
-                {
-                    sorgu.Parameters.AddWithValue("@fizik1", vize);
-                    sorgu.Parameters.AddWithValue("@fizik2", final);
-                }
-                else if(kimya.Enabled == true)
-                {
-                    sorgu.Parameters.AddWithValue("@kimya1", vize);
-                    sorgu.Parameters.AddWithValue("@kimya2", final);
-                }
-                else if(lab.Enabled== true)
-                {
-                    sorgu.Parameters.AddWithValue("@lab1", vize);
-                    sorgu.Parameters.AddWithValue("@lab2", final);
-                }
-                else if(prog.Enabled == true)
-                {
-                    sorgu.Parameters.AddWithValue("@prog1", vize);
-                    sorgu.Parameters.AddWithValue("@prog2", final);
-                }
-
-
-
-                MessageBox.Show("Not Değişiklikleri Yapılmıştır.");
-                baglanti.Close();// bağlantı kapatıldı.
-
-                */
-            }
+            ortalama1.Text = Sonuc.ToString();
         }
 
         private void lab_Click(object sender, EventArgs e)
@@ -298,23 +209,23 @@ namespace WindowsFormsApp2
             baglanti.Open();
             OleDbDataReader reader = command.ExecuteReader();
             reader.Read();
-            v1.Text = reader["lab1"].ToString();
-            f1.Text = reader["lab2"].ToString();
+            vize1.Text = reader["lab1"].ToString();
+            final1.Text = reader["lab2"].ToString();
 
-           
+            //double fNotu = ((((double)reader["fizik1"])* 0.4) + ((double)reader["fizik2"]) *0.6 );
             int Vnotu = (int)reader["lab1"];
             int Fnotu = (int)reader["lab2"];
 
             double Sonuc = ((Vnotu * 0.4) + (Fnotu * 0.6));
             if (Sonuc > 60)
             {
-                s1.Text = "GEÇTİ";
+                sonuç1.Text = "GEÇTİ";
             }
             else
             {
-                s1.Text = "KALDI";
+                sonuç1.Text = "KALDI";
             }
-            o1.Text = Sonuc.ToString();
+            ortalama1.Text = Sonuc.ToString();
         }
 
         private void prog_Click(object sender, EventArgs e)
@@ -327,116 +238,23 @@ namespace WindowsFormsApp2
             baglanti.Open();
             OleDbDataReader reader = command.ExecuteReader();
             reader.Read();
-            v1.Text = reader["prog1"].ToString();
-            f1.Text = reader["prog2"].ToString();
+            vize1.Text = reader["prog1"].ToString();
+            final1.Text = reader["prog2"].ToString();
 
-          
+            //double fNotu = ((((double)reader["fizik1"])* 0.4) + ((double)reader["fizik2"]) *0.6 );
             int Vnotu = (int)reader["prog1"];
             int Fnotu = (int)reader["prog2"];
 
             double Sonuc = ((Vnotu * 0.4) + (Fnotu * 0.6));
             if (Sonuc > 60)
             {
-                s1.Text = "GEÇTİ";
+                sonuç1.Text = "GEÇTİ";
             }
             else
             {
-                s1.Text = "KALDI";
+                sonuç1.Text = "KALDI";
             }
-            o1.Text = Sonuc.ToString();
-        }
-
-        private void sorgulananİsim_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public void button2_Click(object sender, EventArgs e)
-        {
-
-            // kaydet butonu
-
-
-            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=obstakip.accdb;";
-
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
-            {
-                connection.Open();
-
-                string query = "INSERT INTO notlar (ogrenciNo, biyo1, biyo2) VALUES (@ogrenciNo, @biyo1, @biyo2)";
-
-                using (OleDbCommand command = new OleDbCommand(query, connection))
-                {
-                    
-                    command.Parameters.AddWithValue("@biyo1", v1.Text);
-                    command.Parameters.AddWithValue("@biyo2", f1.Text);
-                    command.ExecuteNonQuery();
-                }
-            }
-
-
-
-
-
-
-            /*
-            OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=obstakip.accdb");
-            
-           
-            baglanti.Open();// bağlantı açıldı
-            //sorgu komut yapısı oluşturuldu
-             OleDbCommand sorgu = new OleDbCommand()
-            {
-
-            }
-            
-            sorgu.Connection = baglanti;
-
-
-            string vize = v1.Text;
-            string final = f1.Text;
-           
-
-            sorgu.CommandType = CommandType.Text;
-            //string query = "INSERT INTO notlar (ogrenciNo, biyo1,biyo2,fizik1,fizik2,kimya1,kimya2,lab1,lab2,prog1,prog2) values (@ogrenciNo, @biyo1,@biyo2,@fizik1,@fizik2,@kimya1,@kimya2,@lab1,@lab2,@prog1,@prog2)";
-
-
-            if (biyo.Enabled == true && v1.Enabled == true && f1.Enabled == true)
-            {
-                sorgu.CommandText = "insert into notlar (ogrenciNo, biyo1,biyo2) values (@ogrenciNo,@biyo1,@biyo2)";
-                sorgu.Parameters.AddWithValue("@ogrenciNo", sorgulananOgrenciNo.Text);
-                sorgu.Parameters.AddWithValue("@biyo1", vize);
-                sorgu.Parameters.AddWithValue("@biyo2", final);
-                //sorgu.ExecuteNonQuery();
-            }
-            
-            else if(fizik.Enabled == true && v1.Enabled==true && f1.Enabled==true)
-            {
-                sorgu.Parameters.AddWithValue("@fizik1", vize);
-                sorgu.Parameters.AddWithValue("@fizik2", final);
-            }
-            else if(kimya.Enabled == true)
-            {
-                sorgu.Parameters.AddWithValue("@kimya1", vize);
-                sorgu.Parameters.AddWithValue("@kimya2", final);
-            }
-            else if(lab.Enabled== true)
-            {
-                sorgu.Parameters.AddWithValue("@lab1", vize);
-                sorgu.Parameters.AddWithValue("@lab2", final);
-            }
-            else if(prog.Enabled == true)
-            {
-                sorgu.Parameters.AddWithValue("@prog1", vize);
-                sorgu.Parameters.AddWithValue("@prog2", final);
-            }
-           
-
-
-            MessageBox.Show("Not Değişiklikleri Yapılmıştır.");
-            baglanti.Close();// bağlantı kapatıldı.
-
-            */
+            ortalama1.Text = Sonuc.ToString();
         }
     }
 }
