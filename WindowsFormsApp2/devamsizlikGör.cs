@@ -53,5 +53,10 @@ namespace WindowsFormsApp2
         {
             
         }
+
+        private void fizikdev_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

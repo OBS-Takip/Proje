@@ -56,7 +56,7 @@
             this.button1.Location = new System.Drawing.Point(136, 163);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 32);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 3;
             this.button1.Text = "ŞİFREMİ GETİR";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -67,7 +67,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(73, 132);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(278, 17);
+            this.label1.Size = new System.Drawing.Size(287, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "*Lüfen yukarıdaki bilgileri eksiksiz doldurun";
             // 
@@ -77,7 +77,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(19, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 17);
+            this.label2.Size = new System.Drawing.Size(132, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Öğrenci Numarası:";
             // 
@@ -87,7 +87,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.Location = new System.Drawing.Point(51, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 17);
+            this.label3.Size = new System.Drawing.Size(100, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "TC Kimlik No:";
             // 
@@ -96,7 +96,7 @@
             this.nomail.Location = new System.Drawing.Point(173, 27);
             this.nomail.Name = "nomail";
             this.nomail.Size = new System.Drawing.Size(150, 20);
-            this.nomail.TabIndex = 4;
+            this.nomail.TabIndex = 1;
             this.nomail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tcno
@@ -104,7 +104,7 @@
             this.tcno.Location = new System.Drawing.Point(173, 60);
             this.tcno.Name = "tcno";
             this.tcno.Size = new System.Drawing.Size(150, 20);
-            this.tcno.TabIndex = 5;
+            this.tcno.TabIndex = 2;
             this.tcno.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button7
@@ -113,7 +113,7 @@
             this.button7.Location = new System.Drawing.Point(855, 412);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(98, 38);
-            this.button7.TabIndex = 8;
+            this.button7.TabIndex = 4;
             this.button7.Text = "GERİ";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -162,14 +162,14 @@
             this.AkaSifre.Location = new System.Drawing.Point(173, 60);
             this.AkaSifre.Name = "AkaSifre";
             this.AkaSifre.Size = new System.Drawing.Size(150, 20);
-            this.AkaSifre.TabIndex = 5;
+            this.AkaSifre.TabIndex = 2;
             // 
             // akaMail
             // 
             this.akaMail.Location = new System.Drawing.Point(173, 27);
             this.akaMail.Name = "akaMail";
             this.akaMail.Size = new System.Drawing.Size(150, 20);
-            this.akaMail.TabIndex = 4;
+            this.akaMail.TabIndex = 1;
             // 
             // label7
             // 
@@ -177,7 +177,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.Location = new System.Drawing.Point(51, 60);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 17);
+            this.label7.Size = new System.Drawing.Size(100, 18);
             this.label7.TabIndex = 3;
             this.label7.Text = "TC Kimlik No:";
             // 
@@ -187,7 +187,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.Location = new System.Drawing.Point(19, 28);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(125, 17);
+            this.label8.Size = new System.Drawing.Size(131, 18);
             this.label8.TabIndex = 2;
             this.label8.Text = "Akademisyen Mail:";
             // 
@@ -197,7 +197,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.Location = new System.Drawing.Point(73, 132);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(278, 17);
+            this.label9.Size = new System.Drawing.Size(287, 18);
             this.label9.TabIndex = 1;
             this.label9.Text = "*Lüfen yukarıdaki bilgileri eksiksiz doldurun";
             // 
@@ -207,7 +207,7 @@
             this.button3.Location = new System.Drawing.Point(136, 163);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(157, 32);
-            this.button3.TabIndex = 0;
+            this.button3.TabIndex = 3;
             this.button3.Text = "ŞİFREMİ GETİR";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);

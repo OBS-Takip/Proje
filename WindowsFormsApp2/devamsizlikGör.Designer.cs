@@ -62,7 +62,7 @@
             // 
             this.soyad.AutoSize = true;
             this.soyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.soyad.Location = new System.Drawing.Point(90, 151);
+            this.soyad.Location = new System.Drawing.Point(125, 152);
             this.soyad.Name = "soyad";
             this.soyad.Size = new System.Drawing.Size(97, 18);
             this.soyad.TabIndex = 46;
@@ -72,7 +72,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(141, 194);
+            this.label1.Location = new System.Drawing.Point(176, 195);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 18);
             this.label1.TabIndex = 47;
@@ -82,7 +82,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(131, 235);
+            this.label2.Location = new System.Drawing.Point(166, 236);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 18);
             this.label2.TabIndex = 48;
@@ -92,7 +92,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(148, 278);
+            this.label3.Location = new System.Drawing.Point(183, 279);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 18);
             this.label3.TabIndex = 49;
@@ -102,7 +102,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(58, 325);
+            this.label4.Location = new System.Drawing.Point(93, 326);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(129, 18);
             this.label4.TabIndex = 50;
@@ -112,52 +112,53 @@
             // 
             this.matdev.AutoSize = true;
             this.matdev.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.matdev.Location = new System.Drawing.Point(200, 151);
+            this.matdev.Location = new System.Drawing.Point(235, 152);
             this.matdev.Name = "matdev";
-            this.matdev.Size = new System.Drawing.Size(35, 18);
+            this.matdev.Size = new System.Drawing.Size(23, 18);
             this.matdev.TabIndex = 51;
-            this.matdev.Text = "LAB";
+            this.matdev.Text = "---";
             this.matdev.Click += new System.EventHandler(this.matdev_Click);
             // 
             // fizikdev
             // 
             this.fizikdev.AutoSize = true;
             this.fizikdev.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.fizikdev.Location = new System.Drawing.Point(200, 194);
+            this.fizikdev.Location = new System.Drawing.Point(235, 195);
             this.fizikdev.Name = "fizikdev";
-            this.fizikdev.Size = new System.Drawing.Size(35, 18);
+            this.fizikdev.Size = new System.Drawing.Size(23, 18);
             this.fizikdev.TabIndex = 52;
-            this.fizikdev.Text = "LAB";
+            this.fizikdev.Text = "---";
+            this.fizikdev.Click += new System.EventHandler(this.fizikdev_Click);
             // 
             // kimyadev
             // 
             this.kimyadev.AutoSize = true;
             this.kimyadev.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kimyadev.Location = new System.Drawing.Point(200, 235);
+            this.kimyadev.Location = new System.Drawing.Point(235, 236);
             this.kimyadev.Name = "kimyadev";
-            this.kimyadev.Size = new System.Drawing.Size(35, 18);
+            this.kimyadev.Size = new System.Drawing.Size(23, 18);
             this.kimyadev.TabIndex = 53;
-            this.kimyadev.Text = "LAB";
+            this.kimyadev.Text = "---";
             // 
             // labdev
             // 
             this.labdev.AutoSize = true;
             this.labdev.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labdev.Location = new System.Drawing.Point(200, 278);
+            this.labdev.Location = new System.Drawing.Point(235, 279);
             this.labdev.Name = "labdev";
-            this.labdev.Size = new System.Drawing.Size(35, 18);
+            this.labdev.Size = new System.Drawing.Size(23, 18);
             this.labdev.TabIndex = 54;
-            this.labdev.Text = "LAB";
+            this.labdev.Text = "---";
             // 
             // prodev
             // 
             this.prodev.AutoSize = true;
             this.prodev.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.prodev.Location = new System.Drawing.Point(200, 325);
+            this.prodev.Location = new System.Drawing.Point(235, 326);
             this.prodev.Name = "prodev";
-            this.prodev.Size = new System.Drawing.Size(35, 18);
+            this.prodev.Size = new System.Drawing.Size(23, 18);
             this.prodev.TabIndex = 55;
-            this.prodev.Text = "LAB";
+            this.prodev.Text = "---";
             // 
             // label11
             // 
@@ -171,10 +172,10 @@
             // OGno
             // 
             this.OGno.AutoSize = true;
-            this.OGno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.OGno.Location = new System.Drawing.Point(495, 76);
+            this.OGno.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.OGno.Location = new System.Drawing.Point(497, 71);
             this.OGno.Name = "OGno";
-            this.OGno.Size = new System.Drawing.Size(28, 22);
+            this.OGno.Size = new System.Drawing.Size(37, 29);
             this.OGno.TabIndex = 58;
             this.OGno.Text = "---";
             this.OGno.Click += new System.EventHandler(this.label10_Click);
