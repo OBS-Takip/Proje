@@ -108,7 +108,7 @@ namespace WindowsFormsApp2
 
         private void yeniKayit_Load(object sender, EventArgs e)
         {
-
+             
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
