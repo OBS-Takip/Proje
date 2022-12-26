@@ -54,10 +54,14 @@ namespace WindowsFormsApp2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.Red;
+
+            
+
             this.label2.Location = new System.Drawing.Point(539, 187);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(221, 43);
+
             this.label2.TabIndex = 10;
             this.label2.Text = "Öğrenci No";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -102,7 +106,11 @@ namespace WindowsFormsApp2
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+
+            
+
             this.ClientSize = new System.Drawing.Size(1287, 569);
+
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox1);
