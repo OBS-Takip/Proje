@@ -265,6 +265,7 @@ namespace WindowsFormsApp2
 
 
             komut.ExecuteNonQuery();
+
             baglanti.Close();
 
             MessageBox.Show("Not Bilgisi Güncellendi");
