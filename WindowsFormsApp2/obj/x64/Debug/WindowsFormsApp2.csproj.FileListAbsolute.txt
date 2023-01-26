@@ -5,7 +5,6 @@ C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.cspr
 C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\Interop.MSDAOSP.dll
 C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\Interop.MSDASC.dll
 C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\Interop.OLEDBError.dll
-C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\Interop.PMCObjLib.dll
 C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.csproj.ResolveComReference.cache
 C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.akademisyen.resources
 C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.anaGiris.resources
@@ -22,7 +21,6 @@ C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.Prop
 C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.sifreUnuttum.resources
 C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.sil.resources
 C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.takvim.resources
-C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.trans.resources
 C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.yeniKayit.resources
 C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
 C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
@@ -182,3 +180,7 @@ C:\Users\oocif\OneDrive\Masaüstü\Proje\WindowsFormsApp2\bin\x64\Debug\BouncyCa
 C:\Users\oocif\OneDrive\Masaüstü\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.csproj.CopyComplete
 C:\Users\oocif\OneDrive\Masaüstü\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.akademiöğrencigör.resources
 C:\Users\oocif\OneDrive\Masaüstü\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.ogrbelge.resources
+C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\bin\x64\Debug\BouncyCastle.Crypto.dll
+C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.akademiöğrencigör.resources
+C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.ogrbelge.resources
+C:\Users\ertu\Desktop\Proje\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.csproj.CopyComplete
